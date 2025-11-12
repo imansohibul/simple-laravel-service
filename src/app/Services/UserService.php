@@ -16,9 +16,15 @@ class UserService
     /**
      * Create a new user and send notification emails.
      *
-     * @param array $data
-     * @return User
-     * @throws Exception
+     * @param array $data {
+     *     @type string $email    Valid email address (unique)
+     *     @type string $password Plain text password (will be hashed)
+     *     @type string $name     User's full name
+     * }
+     *
+     * @return User The newly created user instance
+     *
+     * @throws Exception If user creation fails or database transaction error occurs
      */
     public function createUser(array $data): User
     {
@@ -97,12 +103,20 @@ class UserService
         return User::where('email', $email)->exists();
     }
 
-   /**
+    /**
      * Get paginated list of users with filters and sorting.
      *
-     * @param array $params
-     * @param User|null $currentUser
-     * @return array
+     * @param array $params {
+     *     @type string|null $search  Search term for name or email
+     *     @type int         $page    Page number (default: 1)
+     *     @type string      $sortBy  Sort column: 'name', 'email', 'created_at' (default: 'created_at')
+     * }
+     * @param User|null $currentUser Currently authenticated user for permission check
+     *
+     * @return array {
+     *     @type int   $page  Current page number
+     *     @type array $users Array of user objects with orders_count and can_edit
+     * }
      */
     public function getUsers(array $params, ?User $currentUser): array
     {
