@@ -309,7 +309,6 @@ database/
 
 ## 🎯 Best Practices Implemented
 
-- **Repository Pattern** - Clean separation of concerns
 - **Service Layer** - Business logic isolated from controllers
 - **Query Scopes** - Reusable query builders in models
 - **API Resources** - Consistent JSON response formatting
