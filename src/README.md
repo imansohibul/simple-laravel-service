@@ -5,7 +5,7 @@ A robust Laravel-based REST API for user management with some features including
 ## 🚀 Features
 
 - **User Registration** - Create new users with email verification
-- **User Listing** - Paginated user list with advanced filtering
+- **User Listing** - Paginated user list with filtering
 - **Search Functionality** - Search users by name or email
 - **Sorting Options** - Sort by name, email, or creation date
 - **Role-Based Permissions** - Administrator, Manager, and User roles
