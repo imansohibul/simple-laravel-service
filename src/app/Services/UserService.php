@@ -125,35 +125,4 @@ class UserService
             'users' => $users->items(),
         ];
     }
-
-    /**
-     * Determine if current user can edit the target user.
-     *
-     * @param User|null $currentUser
-     * @param User $targetUser
-     * @return bool
-     */
-    protected function canEditUser(?User $currentUser, User $targetUser): bool
-    {
-        if (!$currentUser) {
-            return false;
-        }
-
-        // Administrator can edit any user
-        if ($currentUser->role === 'administrator') {
-            return true;
-        }
-
-        // Manager can only edit users with role 'user'
-        if ($currentUser->role === 'manager') {
-            return $targetUser->role === 'user';
-        }
-
-        // User can only edit themselves
-        if ($currentUser->role === 'user') {
-            return $currentUser->id === $targetUser->id;
-        }
-
-        return false;
-    }
 }
