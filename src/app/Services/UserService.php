@@ -93,17 +93,6 @@ class UserService
     }
 
     /**
-     * Check if email already exists.
-     *
-     * @param string $email
-     * @return bool
-     */
-    public function emailExists(string $email): bool
-    {
-        return User::where('email', $email)->exists();
-    }
-
-    /**
      * Get paginated list of users with filters and sorting.
      *
      * @param array $params {
