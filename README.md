@@ -299,9 +299,6 @@ database/
 │   ├── DatabaseSeeder.php
 │   ├── UserSeeder.php
 │   └── OrderSeeder.php
-└── factories/
-    ├── UserFactory.php
-    └── OrderFactory.php
 ```
 
 ## 🔒 Security Features

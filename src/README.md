@@ -4,7 +4,7 @@ A robust Laravel-based REST API for user management with some features including
 
 ## Author
 
-**Name:** Mochamad Sohibul Iman 
+**Name:** Mochamad Sohibul Iman  
 **Email:** [iman@imansohibul.my.id](mailto:iman@imansohibul.my.id)  
 **LinkedIn:** [www.linkedin.com/in/imansohibul](https://www.linkedin.com/in/imansohibul)
 
@@ -299,9 +299,6 @@ database/
 │   ├── DatabaseSeeder.php
 │   ├── UserSeeder.php
 │   └── OrderSeeder.php
-└── factories/
-    ├── UserFactory.php
-    └── OrderFactory.php
 ```
 
 ## 🔒 Security Features
