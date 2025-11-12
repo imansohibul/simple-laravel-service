@@ -1,6 +1,6 @@
 # User Management API
 
-A robust Laravel-based REST API for user management with comprehensive features including user registration, listing, filtering, and role-based permissions.
+A robust Laravel-based REST API for user management with some features including user registration, listing, filtering, and role-based permissions.
 
 ## 🚀 Features
 
@@ -204,18 +204,13 @@ The system supports three user roles with different permission levels:
 
 ### Administrator
 - Can edit **any user**
-- Full system access
-- Default credentials: `admin@example.com` / `Admin123!@#`
 
 ### Manager
 - Can only edit users with role `user`
 - Cannot edit administrators or other managers
-- Default credentials: `alice@example.com` / `Manager123!@#`
 
 ### User
 - Can only edit **themselves**
-- Standard user permissions
-- Default credentials: `john.doe@example.com` / `User123!@#`
 
 The `can_edit` field in the API response indicates whether the current user has permission to edit each specific user.
 
@@ -265,14 +260,6 @@ The database seeder creates comprehensive test data:
 ```bash
 php artisan db:seed
 ```
-
-**Test accounts:**
-
-| Role          | Email                  | Password        |
-|---------------|------------------------|-----------------|
-| Administrator | admin@example.com      | Admin123!@#     |
-| Manager       | alice@example.com      | Manager123!@#   |
-| User          | john.doe@example.com   | User123!@#      |
 
 ## 🏗️ Project Structure
 
@@ -390,13 +377,6 @@ curl -X GET "http://localhost:8000/api/users?search=john&sortBy=name&page=1"
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-## 📞 Support
-
-For issues, questions, or contributions, please open an issue on the GitHub repository.
 
 ---
 
