@@ -2,6 +2,13 @@
 
 A robust Laravel-based REST API for user management with some features including user registration, listing, filtering, and role-based permissions.
 
+## Author
+
+**Name:** Mochamad Sohibul Iman 
+**Email:** [iman@imansohibul.my.id](mailto:iman@imansohibul.my.id)  
+**LinkedIn:** [www.linkedin.com/in/imansohibul](https://www.linkedin.com/in/imansohibul)
+
+
 ## 🚀 Features
 
 - **User Registration** - Create new users with email verification
@@ -375,7 +382,6 @@ curl -X GET "http://localhost:8000/api/users?search=john&sortBy=name&page=1"
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
 
 ---
 
