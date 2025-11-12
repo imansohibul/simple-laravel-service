@@ -25,8 +25,8 @@ A robust Laravel-based REST API for user management with some features including
 
 - PHP 8.2 or higher
 - Composer
-- MySQL 8.0 or higher
-- Laravel 11.x
+- MySQL 8.0
+- Laravel 12.x
 
 ## 🛠️ Installation
 
